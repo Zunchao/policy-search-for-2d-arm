@@ -2,13 +2,10 @@
 Some errors occured
 
     when debug 'example_pg.py' :
-
         1, use # instead of '''...''' to comment multi-lines
-
         2, in __init__(), define self.gradient_method, but not self.gradMethod
 
     when debug 'example_em.py':
-
         1, use # instead of '''...''' to comment multi-lines
 
 # How to Use
