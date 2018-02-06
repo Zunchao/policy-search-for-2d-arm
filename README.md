@@ -1,9 +1,14 @@
-# modifications when applied to ubuntu 16.04 with python 3.5
-some errors occured
+# Modifications when applied to ubuntu 16.04 with python 3.5
+Some errors occured
+
     when debug 'example_pg.py' :
+
         1, use # instead of '''...''' to comment multi-lines
+
         2, in __init__(), define self.gradient_method, but not self.gradMethod
-    when debug 'example_em.py'
+
+    when debug 'example_em.py':
+
         1, use # instead of '''...''' to comment multi-lines
 
 # How to Use
