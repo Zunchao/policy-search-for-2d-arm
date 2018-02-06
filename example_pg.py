@@ -2,21 +2,18 @@ from matplotlib import pyplot as plt
 import numpy as np
 from Pend2dBallThrowDMP import *
 from enum import Enum
+#import Pend2dBallThrowDMP
 
 
 class PG():
-    """
-    Implements gradient descent to update parameters of the Gaussians parametrizing the upper-level policy.
-    """
-
+    #Implements gradient descent to update parameters of the Gaussians parametrizing the upper-level policy.
     def __init__(self):
-    	"""
-        numDim: dimension of state space
-		numSamples: number of episodic rollouts per iteration
-		maxIter: number of parameter updates
-		numTrials: number of independent learning trials
-    	"""
+        #numDim: dimension of state space
+		#numSamples: number of episodic rollouts per iteration
+		#maxIter: number of parameter updates
+		#numTrials: number of independent learning trials
         self.env = Pend2dBallThrowDMP()
+        #self.env = Pend2dBallThrowDMP
         self.lambd = 7
         self.numDim = 10
         self.numSamples = 25
@@ -28,8 +25,8 @@ class PG():
         self.gamma = 0.9
         self.saveFigures = True
         self.fullGrad = False
-        self.gradMethod = 'NAG' #alternatively 'GD'
-
+        #self.gradMethod = 'NAG' #alternatively 'GD'
+        self.gradient_method = 'NAG'
 
     # Do your learning
     def calculate_R_and_theta(self, Mu_w, Sigma_w):
@@ -48,7 +45,6 @@ class PG():
             theta[:,i] = sample
             R[i] = reward
         return R, theta
-
 
     # update omega
     def update_gradient(self, theta, R, Mu_w, Sigma_w):

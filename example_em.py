@@ -3,17 +3,12 @@ import numpy as np
 from Pend2dBallThrowDMP import *
 
 class EM():
-	"""
-	Implements policy search using Expectation Maximization to update parameters of upper-level policy
-	"""
-
+	#Implements policy search using Expectation Maximization to update parameters of upper-level policy
     def __init__(self):
-    	"""
-        numDim: dimension of state space
-		numSamples: number of episodic rollouts per iteration
-		maxIter: number of parameter updates
-		numTrials: number of independent learning trials
-    	"""
+    	#numDim: dimension of state space
+		#numSamples: number of episodic rollouts per iteration
+		#maxIter: number of parameter updates
+		#numTrials: number of independent learning trials
         self.env = Pend2dBallThrowDMP()
         self.lambd = 7
         self.numDim = 10
@@ -22,15 +17,11 @@ class EM():
         self.numTrials = 10
         self.saveFigures = True
 
-
-
-
-
-    # Do your learning
+        # Do your learning
     def calculate_R_and_theta(self, Mu_w, Sigma_w):
-    # initialize theta vector (2D array: state dimension x number of samples)
-    # and R (reward) vector (1D array: reward per episode)
-    # and w (weights) vector (1D array: weight of current sample)
+        # initialize theta vector (2D array: state dimension x number of samples)
+        # and R (reward) vector (1D array: reward per episode)
+        # and w (weights) vector (1D array: weight of current sample)
         numDim = self.numDim
         numSamples = self.numSamples
         env = self.env
