@@ -9,9 +9,9 @@ class PG():
     #Implements gradient descent to update parameters of the Gaussians parametrizing the upper-level policy.
     def __init__(self):
         #numDim: dimension of state space
-		#numSamples: number of episodic rollouts per iteration
-		#maxIter: number of parameter updates
-		#numTrials: number of independent learning trials
+        #numSamples: number of episodic rollouts per iteration
+        #maxIter: number of parameter updates
+        #numTrials: number of independent learning trials
         self.env = Pend2dBallThrowDMP()
         #self.env = Pend2dBallThrowDMP
         self.lambd = 7

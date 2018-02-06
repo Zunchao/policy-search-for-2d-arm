@@ -6,9 +6,9 @@ class EM():
 	#Implements policy search using Expectation Maximization to update parameters of upper-level policy
     def __init__(self):
     	#numDim: dimension of state space
-		#numSamples: number of episodic rollouts per iteration
-		#maxIter: number of parameter updates
-		#numTrials: number of independent learning trials
+        #numSamples: number of episodic rollouts per iteration
+        #maxIter: number of parameter updates
+        #numTrials: number of independent learning trials
         self.env = Pend2dBallThrowDMP()
         self.lambd = 7
         self.numDim = 10

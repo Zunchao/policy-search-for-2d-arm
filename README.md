@@ -1,3 +1,11 @@
+# modifications when applied to ubuntu 16.04 with python 3.5
+some errors occured
+    when debug 'example_pg.py' :
+        1, use # instead of '''...''' to comment multi-lines
+        2, in __init__(), define self.gradient_method, but not self.gradMethod
+    when debug 'example_em.py'
+        1, use # instead of '''...''' to comment multi-lines
+
 # How to Use
 
 There are two versions to run: Either the probabilistic policy search using Expectation Maximization or gradient based policy search (policy gradient). The first version can be run using example_em.py:
